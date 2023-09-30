@@ -29,7 +29,7 @@ function delCalcDisplay()
 function callCALCAPI(string)
 {
     var myheaders = new Headers();
-    headers.append("Content-Type", "application/json");
+    myheaders.append("Content-Type", "application/json");
 
     var raw = JSON.stringify({"string":string});
 
