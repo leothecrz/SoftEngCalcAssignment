@@ -10,26 +10,42 @@
         <input id="calcDisplay" type="text" class="display" >
         
         <div class="buttons">
-            <button onclick="clearCalcDisplay()"> AC </button>
-            <button onclick="delCalcDisplay()"> DEL </button>
-            <button onclick="appenedToCalcDisplay('^') "> ^ </button>
-            <button onclick="appenedToCalcDisplay('*')"> * </button>
-            <button onclick="appenedToCalcDisplay('7')"> 7 </button>
-            <button onclick="appenedToCalcDisplay('8')"> 8 </button>
-            <button onclick="appenedToCalcDisplay('9')"> 9 </button>
-            <button onclick="appenedToCalcDisplay('+')"> + </button>
-            <button onclick="appenedToCalcDisplay('6')"> 6 </button>
-            <button onclick="appenedToCalcDisplay('5')"> 5 </button>
-            <button onclick="appenedToCalcDisplay('4')"> 4 </button>
-            <button onclick="appenedToCalcDisplay('-')"> - </button>
-            <button onclick="appenedToCalcDisplay('3')"> 3 </button>
-            <button onclick="appenedToCalcDisplay('2')"> 2 </button>
-            <button onclick="appenedToCalcDisplay('1')"> 1 </button>
-            <button onclick="appenedToCalcDisplay('/')"> / </button>
-            <button onclick="appenedToCalcDisplay( '(' )"> ( </button>
-            <button onclick="appenedToCalcDisplay( '0' )  "> 0</button>
-            <button onclick="appenedToCalcDisplay( ')' )"> ) </button>
-            <button onclick="evaluateInput()"> =/Enter </button>
+            <div class="button_row">
+                <button onclick="clearCalcDisplay()"> AC </button>
+                <button onclick="delCalcDisplay()"> DEL </button>
+                <button onclick="appenedToCalcDisplay('^') "> ^ </button>
+                <button onclick="appenedToCalcDisplay('*')"> * </button>
+            </div>
+            
+            <div class="button_row">
+                <button onclick="appenedToCalcDisplay('7')"> 7 </button>
+                <button onclick="appenedToCalcDisplay('8')"> 8 </button>
+                <button onclick="appenedToCalcDisplay('9')"> 9 </button>
+                <button onclick="appenedToCalcDisplay('+')"> + </button>
+            </div>
+
+            
+            <div class="button_row">
+                <button onclick="appenedToCalcDisplay('6')"> 6 </button>
+                <button onclick="appenedToCalcDisplay('5')"> 5 </button>
+                <button onclick="appenedToCalcDisplay('4')"> 4 </button>
+                <button onclick="appenedToCalcDisplay('-')"> - </button>
+            </div>
+            
+            <div class="button_row">
+                <button onclick="appenedToCalcDisplay('3')"> 3 </button>
+                <button onclick="appenedToCalcDisplay('2')"> 2 </button>
+                <button onclick="appenedToCalcDisplay('1')"> 1 </button>
+                <button onclick="appenedToCalcDisplay('/')"> / </button>
+            </div>
+
+            <div class="button_row">
+                <button onclick="appenedToCalcDisplay( '(' )"> ( </button>
+                <button onclick="appenedToCalcDisplay( '0' )  "> 0</button>
+                <button onclick="appenedToCalcDisplay( ')' )"> ) </button>
+                <button onclick="evaluateInput()"> =/Enter </button>
+            </div>
+
         </div>
 
     </div>

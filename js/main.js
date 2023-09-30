@@ -26,23 +26,34 @@ function delCalcDisplay()
     display.value = display.value.slice(0, -1);
 }
 
+function callCALCAPI(string)
+{
+    var myheaders = new Headers();
+    headers.append("Content-Type", "application/json");
+
+    var raw = JSON.stringify({"string":string});
+
+    var requestOptions = 
+    {
+        method: 'POST',
+        headers: myheaders,
+        body: raw,
+        redirect: 'follow'
+    };
+
+    fetch("https://cjuh2w7qk2.execute-api.us-west-1.amazonaws.com/Development", requestOptions)
+    .then(responce => responce.text())
+    .then(resutls => alert(JSON.parse(resutls).body))
+    .catch(err => console.log('error', err));
+
+}
+
+
 /**
  * 
  */
 function evaluateInput()
 {
-    var out = document.getElementById("calcDisplay").value;
-    if(isInfix(out))
-    {
-        var stage2 = infixToPostfix(out);
-        var ans = solvePostfix(stage2);
-        alert(ans);
-    }
-    else
-    {
-        alert("Invalid Input");
-    }
-
-    
+    callCALCAPI(document.getElementById("calcDisplay").value);
 }
 // CALC FUNCTIONS
